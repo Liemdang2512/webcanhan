@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Đăng ký Đối tác | Sinh Động Luxury Ecosystem</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+        }
+        .gold-glow:hover {
+            box-shadow: 0 0 15px rgba(212, 215, 0, 0.4);
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #f2ca50 !important;
+            box-shadow: inset 0 0 5px rgba(212, 175, 55, 0.2);
+        }
+        .bg-piano-black {
+            background-color: #000000;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #000000; }
+        ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 3px; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#3a3000",
+                      "surface-container-highest": "#353534",
+                      "primary-fixed": "#ffe088",
+                      "primary": "#f2ca50",
+                      "surface": "#131313",
+                      "surface-container": "#201f1f",
+                      "secondary-fixed": "#e2e2e2",
+                      "on-primary-fixed-variant": "#574500",
+                      "error": "#ffb4ab",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-secondary-fixed-variant": "#474747",
+                      "tertiary-fixed": "#ffe16d",
+                      "secondary": "#c6c6c6",
+                      "inverse-on-surface": "#313030",
+                      "on-surface-variant": "#d0c5af",
+                      "on-primary": "#3c2f00",
+                      "inverse-primary": "#735c00",
+                      "background": "#131313",
+                      "on-secondary-fixed": "#1b1b1b",
+                      "secondary-fixed-dim": "#c6c6c6",
+                      "surface-dim": "#131313",
+                      "on-secondary": "#303030",
+                      "on-tertiary-container": "#534400",
+                      "on-primary-container": "#554300",
+                      "inverse-surface": "#e5e2e1",
+                      "surface-variant": "#353534",
+                      "on-error": "#690005",
+                      "on-background": "#e5e2e1",
+                      "on-secondary-container": "#b5b5b5",
+                      "on-error-container": "#ffdad6",
+                      "primary-fixed-dim": "#e9c349",
+                      "on-primary-fixed": "#241a00",
+                      "secondary-container": "#474747",
+                      "surface-container-high": "#2a2a2a",
+                      "surface-bright": "#393939",
+                      "tertiary-fixed-dim": "#e9c400",
+                      "surface-container-low": "#1c1b1b",
+                      "tertiary-container": "#d2b100",
+                      "on-surface": "#e5e2e1",
+                      "primary-container": "#d4af37",
+                      "outline-variant": "#4d4635",
+                      "tertiary": "#f2cc00",
+                      "surface-tint": "#e9c349",
+                      "on-tertiary-fixed-variant": "#544600",
+                      "error-container": "#93000a",
+                      "on-tertiary-fixed": "#221b00",
+                      "outline": "#99907c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max-width": "1200px",
+                      "margin-desktop": "64px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Montserrat"],
+                      "body-md": ["Montserrat"],
+                      "label-sm": ["Montserrat"],
+                      "display-lg": ["Bodoni Moda"],
+                      "headline-lg-mobile": ["Bodoni Moda"],
+                      "headline-lg": ["Bodoni Moda"],
+                      "headline-md": ["Bodoni Moda"],
+                      "label-lg": ["Montserrat"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                      "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+                      "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-piano-black text-on-background selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-primary/20 shadow-2xl">
+<nav class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max-width mx-auto">
+<div class="font-display-lg text-headline-md font-bold text-primary tracking-tighter">Sinh Động</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-body-lg text-body-lg text-on-surface hover:text-primary-fixed transition-colors transition-all duration-300 ease-in-out" href="#">Ecosystem</a>
+<a class="font-body-lg text-body-lg text-on-surface hover:text-primary-fixed transition-colors transition-all duration-300 ease-in-out" href="#">Locations</a>
+<a class="font-body-lg text-body-lg text-primary border-b-2 border-primary pb-1 transition-all duration-300 ease-in-out" href="#">Partners</a>
+<a class="font-body-lg text-body-lg text-on-surface hover:text-primary-fixed transition-colors transition-all duration-300 ease-in-out" href="#">Technology</a>
+<button class="bg-primary hover:bg-primary-fixed text-on-primary px-6 py-2 rounded-lg font-label-lg text-label-lg transition-all duration-300 uppercase tracking-widest gold-glow">Partner Login</button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+<!-- Page Header -->
+<section class="mb-16">
+<h1 class="font-display-lg text-display-lg text-primary mb-4">Liên hệ &amp; Hợp tác</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Gia nhập hệ sinh thái cao cấp của Sinh Động. Chúng tôi kết nối các thương hiệu hàng đầu với không gian sang trọng và giải pháp năng lượng tiên tiến.
+            </p>
+</section>
+<!-- Form Selection Tabs -->
+<div class="flex gap-4 mb-12 border-b border-surface-container-highest">
+<button class="pb-4 px-2 font-label-lg text-label-lg text-primary border-b-2 border-primary transition-all" id="tab-b2b" onclick="switchForm('b2b')">ĐĂNG KÝ ĐỐI TÁC ĐIỂM ĐẶT</button>
+<button class="pb-4 px-2 font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-all" id="tab-ooh" onclick="switchForm('ooh')">YÊU CẦU QUẢNG CÁO OOH</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Form Canvas -->
+<div class="lg:col-span-8">
+<!-- B2B Partner Form -->
+<form class="space-y-8 animate-in fade-in duration-700" id="form-b2b">
+<div class="glass-card p-8 rounded-xl space-y-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">corporate_fare</span>
+                            Thông tin Đối tác B2B
+                        </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-lg text-label-lg text-on-surface-variant uppercase">Họ và Tên</label>
+<input class="w-full bg-surface-container-lowest border-b border-outline-variant py-3 px-4 text-on-surface focus:border-primary transition-all" placeholder="Nguyễn Văn A" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-lg text-label-lg text-on-surface-variant uppercase">Số điện thoại / Zalo</label>
+<input class="w-full bg-surface-container-lowest border-b border-outline-variant py-3 px-4 text-on-surface focus:border-primary transition-all" placeholder="090 123 4567" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-lg text-label-lg text-on-surface-variant uppercase">Loại hình Địa điểm</label>
+<select class="w-full bg-surface-container-lowest border-b border-outline-variant py-3 px-4 text-on-surface focus:border-primary transition-all appearance-none">
+<option disabled="" selected="" value="">Chọn loại hình</option>
+<option>Phòng chờ Sân bay</option>
+<option>Khách sạn 5 sao</option>
+<option>Sân Golf</option>
+<option>Trung tâm Thương mại</option>
+<option>Chuỗi Nhà hàng Cao cấp</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-lg text-label-lg text-on-surface-variant uppercase">Lưu lượng khách hàng (Hàng tháng)</label>
+<input class="w-full bg-surface-container-lowest border-b border-outline-variant py-3 px-4 text-on-surface focus:border-primary transition-all" placeholder="Ví dụ: 10,000+" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-lg text-label-lg text-on-surface-variant uppercase">Địa chỉ chi tiết</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-b border-outline-variant py-3 px-4 pl-12 text-on-surface focus:border-primary transition-all" placeholder="Nhập địa chỉ để tìm kiếm trên bản đồ" type="text"/>
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary">location_on</span>
+</div>
+<div class="w-full h-48 rounded-lg overflow-hidden border border-outline-variant mt-4">
+<img class="w-full h-full object-cover grayscale brightness-50" data-alt="A sophisticated dark-themed digital map interface highlighting a premium location in Ho Chi Minh City. The map features minimalist golden lines for roads and bright pin points. The aesthetic is high-tech luxury, with a blurred dark cityscape background and glowing UI elements that suggest precision and high-value geographic data." data-location="Ho Chi Minh City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB05PgAKqIG_5PnXgjzlvR9d9qDcffUb3Y__W7AOEOCjscN26RVDJWbZiqOjHHVa_7tAMj43ijP_rJ_d2uVFjZUrbylJ1ClL7uljM03lJv2BzlLBhTmRglZ2zRnfLcB39MS7GR50GOMYVIxGvVXpumLmxQFvjmkvSSd6zEcwTXw_6lnOp7Gh6tvNIjDSj17bojfFjGf-0oohWikmyEFxogY3eI9eodIMe4l8tKeciDFEgGDk7o6Exx4XhVsYBfQ8QeYqCmrJct30QPf"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-lg text-label-lg text-on-surface-variant uppercase">Hình ảnh thực tế địa điểm</label>
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-8 text-center hover:border-primary transition-all group cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary mb-2">cloud_upload</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Kéo thả hoặc nhấp để tải lên (Tối đa 5 ảnh)</p>
+</div>
+</div>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary-fixed text-on-primary py-5 rounded-lg font-headline-md text-headline-md uppercase tracking-widest gold-glow transition-all" type="submit">
+                        Gửi Yêu Cầu Hợp Tác
+                    </button>
+</form>
+<!-- OOH Inquiry Form -->
+<form class="hidden space-y-8 animate-in fade-in duration-700" id="form-ooh">
+<div class="glass-card p-8 rounded-xl space-y-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">campaign</span>
+                            Yêu cầu Tư vấn Quảng cáo
+                        </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-lg text-label-lg text-on-surface-variant uppercase">Tên Công ty / Thương hiệu</label>
+<input class="w-full bg-surface-container-lowest border-b border-outline-variant py-3 px-4 text-on-surface focus:border-primary transition-all" placeholder="Công ty TNHH Luxury Brand" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-lg text-label-lg text-on-surface-variant uppercase">Ngân sách dự kiến</label>
+<select class="w-full bg-surface-container-lowest border-b border-outline-variant py-3 px-4 text-on-surface focus:border-primary transition-all appearance-none">
+<option disabled="" selected="" value="">Chọn tầm ngân sách</option>
+<option>Dưới 100tr</option>
+<option>100tr - 500tr</option>
+<option>500tr - 1 tỷ</option>
+<option>Trên 1 tỷ</option>
+</select>
+</div>
+</div>
+<div class="space-y-4">
+<label class="font-label-lg text-label-lg text-on-surface-variant uppercase">Vị trí quan tâm (Chọn nhiều)</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<label class="flex items-center gap-3 p-4 border border-outline-variant rounded-lg cursor-pointer hover:bg-primary/5 transition-all">
+<input class="w-5 h-5 rounded border-primary text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">Màn hình LED Sân bay</span>
+</label>
+<label class="flex items-center gap-3 p-4 border border-outline-variant rounded-lg cursor-pointer hover:bg-primary/5 transition-all">
+<input class="w-5 h-5 rounded border-primary text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">Billboard Trung tâm Q1</span>
+</label>
+<label class="flex items-center gap-3 p-4 border border-outline-variant rounded-lg cursor-pointer hover:bg-primary/5 transition-all">
+<input class="w-5 h-5 rounded border-primary text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">LCD Thang máy Hạng A</span>
+</label>
+<label class="flex items-center gap-3 p-4 border border-outline-variant rounded-lg cursor-pointer hover:bg-primary/5 transition-all">
+<input class="w-5 h-5 rounded border-primary text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">Mạng lưới Trạm Sạc Power Bank</span>
+</label>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-lg text-label-lg text-on-surface-variant uppercase">Thời gian triển khai dự kiến</label>
+<input class="w-full bg-surface-container-lowest border-b border-outline-variant py-3 px-4 text-on-surface focus:border-primary transition-all" type="month"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-lg text-label-lg text-on-surface-variant uppercase">Lời nhắn / Yêu cầu thêm</label>
+<textarea class="w-full bg-surface-container-lowest border-b border-outline-variant py-3 px-4 text-on-surface focus:border-primary transition-all resize-none" placeholder="Mô tả chiến dịch của bạn..." rows="4"></textarea>
+</div>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary-fixed text-on-primary py-5 rounded-lg font-headline-md text-headline-md uppercase tracking-widest gold-glow transition-all" type="submit">
+                        Yêu Cầu Báo Giá
+                    </button>
+</form>
+</div>
+<!-- Sidebar Info -->
+<aside class="lg:col-span-4 space-y-8">
+<div class="glass-card p-8 rounded-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-8xl text-primary">verified</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4">Tại sao là Sinh Động?</h4>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">diamond</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-bold uppercase">Phân khúc Thượng lưu</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Tiếp cận 1% tệp khách hàng có thu nhập cao nhất tại các điểm chạm sang trọng.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">bolt</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-bold uppercase">Năng lượng Thông minh</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Giải pháp trạm sạc dự phòng tích hợp IoT, tăng trải nghiệm dịch vụ tại chỗ.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">visibility</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-bold uppercase">Hiển thị Đẳng cấp</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Hệ thống quảng cáo ngoài trời hiện đại với độ phân giải siêu thực và vị trí đắc địa.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="bg-surface-container rounded-xl p-8 space-y-4">
+<h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-widest border-b border-primary/20 pb-2">Hỗ trợ Trực tiếp</h4>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">phone_in_talk</span>
+<span class="font-body-lg text-body-lg">1900 88 66 XX</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="font-body-lg text-body-lg">partnership@sinhdong.vn</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">apartment</span>
+<span class="font-body-lg text-body-lg">Bitexco Financial Tower, Quận 1, TP.HCM</span>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-surface-container-lowest border-t border-primary/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max-width mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-display-lg text-headline-md text-primary mb-6">Sinh Động</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">Kiến tạo hệ sinh thái tiện ích đẳng cấp cho tương lai số.</p>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-6 uppercase tracking-widest">Khám phá</h5>
+<ul class="space-y-4 font-label-lg text-label-lg text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors duration-200" href="#">Hệ sinh thái</a></li>
+<li><a class="hover:text-primary transition-colors duration-200" href="#">Địa điểm</a></li>
+<li><a class="hover:text-primary transition-colors duration-200" href="#">Giải pháp Doanh nghiệp</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-6 uppercase tracking-widest">Pháp lý</h5>
+<ul class="space-y-4 font-label-lg text-label-lg text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors duration-200" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors duration-200" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-6 uppercase tracking-widest">Liên hệ</h5>
+<ul class="space-y-4 font-label-lg text-label-lg text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors duration-200" href="#">Global Support</a></li>
+<li><a class="hover:text-primary transition-colors duration-200" href="#">Trung tâm Báo chí</a></li>
+<li class="flex gap-4 mt-6">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-all">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-all">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-all">brand_awareness</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="text-center mt-16 pt-8 border-t border-white/5">
+<p class="font-label-lg text-label-lg text-on-surface-variant opacity-60">© 2024 Sinh Động Luxury Ecosystem. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        function switchForm(type) {
+            const b2bForm = document.getElementById('form-b2b');
+            const oohForm = document.getElementById('form-ooh');
+            const b2bTab = document.getElementById('tab-b2b');
+            const oohTab = document.getElementById('tab-ooh');
+
+            if (type === 'b2b') {
+                b2bForm.classList.remove('hidden');
+                oohForm.classList.add('hidden');
+                b2bTab.classList.add('text-primary', 'border-primary');
+                b2bTab.classList.remove('text-on-surface-variant');
+                oohTab.classList.remove('text-primary', 'border-primary');
+                oohTab.classList.add('text-on-surface-variant');
+            } else {
+                b2bForm.classList.add('hidden');
+                oohForm.classList.remove('hidden');
+                oohTab.classList.add('text-primary', 'border-primary');
+                oohTab.classList.remove('text-on-surface-variant');
+                b2bTab.classList.remove('text-primary', 'border-primary');
+                b2bTab.classList.add('text-on-surface-variant');
+            }
+        }
+
+        // Form submission micro-interaction
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const btn = e.target.querySelector('button[type="submit"]');
+                const originalText = btn.innerText;
+                btn.innerText = 'Đang gửi...';
+                btn.disabled = true;
+                btn.classList.add('opacity-50');
+                
+                setTimeout(() => {
+                    btn.innerText = 'Gửi Thành Công';
+                    btn.classList.remove('bg-gradient-to-r', 'from-primary', 'to-primary-fixed');
+                    btn.classList.add('bg-green-600');
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.classList.add('bg-gradient-to-r', 'from-primary', 'to-primary-fixed');
+                        btn.classList.remove('bg-green-600', 'opacity-50');
+                        btn.disabled = false;
+                        form.reset();
+                    }, 2000);
+                }, 1500);
+            });
+        });
+    </script>
+</body></html>
