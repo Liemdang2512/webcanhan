@@ -1,0 +1,15 @@
+# Sinh Động - Luxury Airport OOH & Shared Power Bank Ecosystem
+
+## Art Direction: Luxury Modern & Minimalist
+- **Backgrounds**: Matte Black (#121212) / Piano Black (#000000)
+- **Text**: Gold (#D4AF37) for headings, White (#F5F5F5) for body.
+- **CTAs**: Gold Gradients with Glow effects.
+- **Interactive**: Hover glows, thin gold borders.
+- **Mobile-First** approach but starting with Desktop as requested.
+
+## Screen List
+1. **Homepage (The Gateway)**: Hero section with slogan "Năng lượng vô tận cho hành trình đẳng cấp", overview of both B2B (OOH) and B2C (Power bank) ecosystems.
+2. **OOH Airport Portfolio (B2B)**: Interactive map of LED locations, 4K portfolio gallery, and smart quotation form.
+3. **Shared Power Bank Landing Page (B2C/B2B)**: Product specs (5000mAh, 3 cables, 64-port station), Dark Mode Station Map, and "Touch & Charge" 4-step user guide.
+4. **Partner Profit Calculator & FAQ**: Interactive slider for ROI calculation and Tabbed FAQ for partners and users.
+5. **Registration & Contact**: Comprehensive B2B station partner form and OOH inquiry form.

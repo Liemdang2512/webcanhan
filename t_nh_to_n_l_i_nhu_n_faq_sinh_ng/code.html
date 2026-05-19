@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sinh Động - Partner Profit Calculator &amp; FAQ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#3a3000",
+                        "surface-container-highest": "#353534",
+                        "primary-fixed": "#ffe088",
+                        "primary": "#f2ca50",
+                        "surface": "#131313",
+                        "surface-container": "#201f1f",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-primary-fixed-variant": "#574500",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed-variant": "#474747",
+                        "tertiary-fixed": "#ffe16d",
+                        "secondary": "#c6c6c6",
+                        "inverse-on-surface": "#313030",
+                        "on-surface-variant": "#d0c5af",
+                        "on-primary": "#3c2f00",
+                        "inverse-primary": "#735c00",
+                        "background": "#131313",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "surface-dim": "#131313",
+                        "on-secondary": "#303030",
+                        "on-tertiary-container": "#534400",
+                        "on-primary-container": "#554300",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-variant": "#353534",
+                        "on-error": "#690005",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-container": "#b5b5b5",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-primary-fixed": "#241a00",
+                        "secondary-container": "#474747",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-bright": "#393939",
+                        "tertiary-fixed-dim": "#e9c400",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-container": "#d2b100",
+                        "on-surface": "#e5e2e1",
+                        "primary-container": "#d4af37",
+                        "outline-variant": "#4d4635",
+                        "tertiary": "#f2cc00",
+                        "surface-tint": "#e9c349",
+                        "on-tertiary-fixed-variant": "#544600",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed": "#221b00",
+                        "outline": "#99907c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max-width": "1200px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "label-sm": ["Montserrat"],
+                        "display-lg": ["Bodoni Moda"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "headline-md": ["Bodoni Moda"],
+                        "label-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                        "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(19, 19, 19, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+        .gold-glow {
+            text-shadow: 0 0 20px rgba(242, 202, 80, 0.4);
+        }
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #2a2a2a;
+            border-radius: 2px;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #f2ca50;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -8px;
+            box-shadow: 0 0 10px rgba(242, 202, 80, 0.5);
+        }
+        .faq-transition {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-active .faq-transition {
+            max-height: 500px;
+        }
+        .faq-active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-primary/20 shadow-2xl">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max-width mx-auto">
+<div class="font-display-lg text-headline-md font-bold text-primary tracking-tighter">Sinh Động</div>
+<div class="hidden md:flex gap-8">
+<a class="font-body-lg text-body-lg text-on-surface hover:text-primary-fixed transition-colors" href="#">Ecosystem</a>
+<a class="font-body-lg text-body-lg text-on-surface hover:text-primary-fixed transition-colors" href="#">Locations</a>
+<a class="font-body-lg text-body-lg text-primary border-b-2 border-primary pb-1" href="#">Partners</a>
+<a class="font-body-lg text-body-lg text-on-surface hover:text-primary-fixed transition-colors" href="#">Technology</a>
+</div>
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-6 py-2 rounded-full hover:shadow-[0_0_15px_rgba(212,175,55,0.6)] transition-all duration-300">
+                Partner Login
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+<!-- Header Section -->
+<section class="mb-16 text-center">
+<h1 class="font-display-lg text-display-lg text-primary mb-4">Lợi Nhuận Đối Tác</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Khám phá tiềm năng tăng trưởng doanh thu vượt trội khi trở thành một phần của hệ sinh thái năng lượng cao cấp Sinh Động.</p>
+</section>
+<!-- Calculator Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-24">
+<div class="lg:col-span-7 glass-card p-8 rounded-xl">
+<h2 class="font-headline-md text-headline-md text-primary mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined">calculate</span>
+                    Công Cụ Tính Lợi Nhuận
+                </h2>
+<div class="space-y-12">
+<!-- Slider 1 -->
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<label class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">Số Lượng Trạm (Stations)</label>
+<span class="text-primary font-bold text-headline-md" id="station-val">5</span>
+</div>
+<input class="w-full" id="station-slider" max="50" min="1" type="range" value="5"/>
+</div>
+<!-- Slider 2 -->
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<label class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">Lượt Thuê Dự Kiến/Ngày</label>
+<span class="text-primary font-bold text-headline-md" id="rental-val">10</span>
+</div>
+<input class="w-full" id="rental-slider" max="100" min="1" type="range" value="10"/>
+</div>
+</div>
+<div class="mt-12 p-6 bg-surface-container rounded-lg border border-primary/10">
+<p class="text-label-sm text-on-surface-variant italic">* Phí thuê trung bình ước tính 20,000 VNĐ/lượt. Tỷ lệ chia sẻ lợi nhuận mặc định là 40% cho đối tác.</p>
+</div>
+</div>
+<!-- ROI Output -->
+<div class="lg:col-span-5 flex flex-col gap-gutter">
+<div class="glass-card p-8 rounded-xl flex-1 flex flex-col justify-center items-center text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+<p class="font-label-lg text-label-lg text-on-surface uppercase mb-4 relative z-10">Lợi Nhuận Ước Tính/Tháng</p>
+<div class="relative z-10">
+<span class="font-display-lg text-display-lg text-primary gold-glow" id="roi-output">12,000,000</span>
+<span class="text-primary font-headline-md ml-2">VNĐ</span>
+</div>
+<p class="text-on-surface-variant mt-4 font-body-md relative z-10">Thời gian hoàn vốn dự kiến: <span class="text-secondary font-bold">4.5 tháng</span></p>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold py-6 rounded-xl text-headline-md hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] transition-all">
+                    Trở Thành Đối Tác Ngay
+                </button>
+</div>
+</section>
+<!-- 4 Không - 3 Có Section -->
+<section class="mb-24">
+<h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Mô Hình Hợp Tác "4 Không - 3 Có"</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- 4 Không -->
+<div class="glass-card p-8 rounded-xl">
+<h3 class="font-headline-md text-headline-md text-error mb-6">4 Không</h3>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-error mt-1">cancel</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">KHÔNG Chi Phí Đầu Tư</p>
+<p class="text-on-surface-variant text-body-md">Sinh Động cung cấp toàn bộ thiết bị trạm sạc miễn phí.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-error mt-1">cancel</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">KHÔNG Chi Phí Vận Hành</p>
+<p class="text-on-surface-variant text-body-md">Chúng tôi quản lý hệ thống phần mềm và thanh toán tự động.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-error mt-1">cancel</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">KHÔNG Rủi Ro Hư Hỏng</p>
+<p class="text-on-surface-variant text-body-md">Chính sách bảo trì trọn đời và thay mới pin định kỳ.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-error mt-1">cancel</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">KHÔNG Tốn Diện Tích</p>
+<p class="text-on-surface-variant text-body-md">Thiết kế tối giản, sang trọng, chỉ chiếm 0.1m2 mặt bằng.</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- 3 Có -->
+<div class="glass-card p-8 rounded-xl border-primary/40 bg-primary/5">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">3 Có</h3>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">CÓ Doanh Thu Thụ Động</p>
+<p class="text-on-surface-variant text-body-md">Nhận hoa hồng trực tiếp từ mỗi lượt khách hàng thuê pin.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">CÓ Giá Trị Gia Tăng</p>
+<p class="text-on-surface-variant text-body-md">Nâng tầm trải nghiệm khách hàng tại cơ sở của bạn.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">CÓ Dữ Liệu Khách Hàng</p>
+<p class="text-on-surface-variant text-body-md">Tiếp cận báo cáo hành vi khách hàng qua dashboard đối tác.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="max-w-4xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Câu Hỏi Thường Gặp</h2>
+<!-- Tabs -->
+<div class="flex justify-center gap-8 mb-12 border-b border-surface-container-highest">
+<button class="pb-4 font-label-lg text-label-lg text-primary border-b-2 border-primary transition-all" id="tab-b2b" onclick="switchTab('b2b')">Dành Cho Đối Tác (B2B)</button>
+<button class="pb-4 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all" id="tab-b2c" onclick="switchTab('b2c')">Dành Cho Người Dùng (B2C)</button>
+</div>
+<!-- FAQ Content (B2B) -->
+<div class="space-y-4 block" id="faq-b2b">
+<div class="glass-card rounded-lg overflow-hidden faq-item cursor-pointer" onclick="toggleFaq(this)">
+<div class="p-6 flex justify-between items-center">
+<span class="font-body-lg text-body-lg text-on-surface">Yêu cầu về mặt bằng đặt trạm là gì?</span>
+<span class="material-symbols-outlined faq-icon transition-transform">expand_more</span>
+</div>
+<div class="faq-transition">
+<div class="p-6 pt-0 text-on-surface-variant font-body-md">
+                            Chúng tôi chỉ yêu cầu một vị trí khô ráo, có nguồn điện ổn định và dễ dàng tiếp cận cho khách hàng. Diện tích cần thiết chỉ khoảng 30x30cm cho các trạm tiêu chuẩn.
+                        </div>
+</div>
+</div>
+<div class="glass-card rounded-lg overflow-hidden faq-item cursor-pointer" onclick="toggleFaq(this)">
+<div class="p-6 flex justify-between items-center">
+<span class="font-body-lg text-body-lg text-on-surface">Hợp đồng hợp tác kéo dài bao lâu?</span>
+<span class="material-symbols-outlined faq-icon transition-transform">expand_more</span>
+</div>
+<div class="faq-transition">
+<div class="p-6 pt-0 text-on-surface-variant font-body-md">
+                            Hợp đồng tiêu chuẩn thường kéo dài từ 12-24 tháng và có thể tự động gia hạn nếu cả hai bên hài lòng với kết quả kinh doanh.
+                        </div>
+</div>
+</div>
+<div class="glass-card rounded-lg overflow-hidden faq-item cursor-pointer" onclick="toggleFaq(this)">
+<div class="p-6 flex justify-between items-center">
+<span class="font-body-lg text-body-lg text-on-surface">Tôi có thể quản lý doanh thu theo thời gian thực không?</span>
+<span class="material-symbols-outlined faq-icon transition-transform">expand_more</span>
+</div>
+<div class="faq-transition">
+<div class="p-6 pt-0 text-on-surface-variant font-body-md">
+                            Có, mỗi đối tác sẽ được cấp một tài khoản Dashboard để theo dõi lượt thuê, tình trạng pin và doanh thu tích lũy từng phút.
+                        </div>
+</div>
+</div>
+</div>
+<!-- FAQ Content (B2C) -->
+<div class="space-y-4 hidden" id="faq-b2c">
+<div class="glass-card rounded-lg overflow-hidden faq-item cursor-pointer" onclick="toggleFaq(this)">
+<div class="p-6 flex justify-between items-center">
+<span class="font-body-lg text-body-lg text-on-surface">Làm sao để thuê pin Sinh Động?</span>
+<span class="material-symbols-outlined faq-icon transition-transform">expand_more</span>
+</div>
+<div class="faq-transition">
+<div class="p-6 pt-0 text-on-surface-variant font-body-md">
+                            Chỉ cần quét mã QR trên trạm bằng ứng dụng Sinh Động hoặc các ví điện tử liên kết, pin sẽ tự động được đẩy ra sau khi bạn hoàn tất bước xác nhận thanh toán.
+                        </div>
+</div>
+</div>
+<div class="glass-card rounded-lg overflow-hidden faq-item cursor-pointer" onclick="toggleFaq(this)">
+<div class="p-6 flex justify-between items-center">
+<span class="font-body-lg text-body-lg text-on-surface">Tôi có thể trả pin ở địa điểm khác không?</span>
+<span class="material-symbols-outlined faq-icon transition-transform">expand_more</span>
+</div>
+<div class="faq-transition">
+<div class="p-6 pt-0 text-on-surface-variant font-body-md">
+                            Hoàn toàn được. Bạn có thể mượn pin tại một địa điểm và trả tại bất kỳ trạm sạc Sinh Động nào trong hệ thống toàn quốc.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-16 border-t border-primary/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max-width mx-auto">
+<div class="md:col-span-1">
+<div class="font-display-lg text-headline-md text-primary mb-6">Sinh Động</div>
+<p class="text-on-surface-variant text-label-lg">Kiến tạo hệ sinh thái năng lượng tương lai cho không gian thượng lưu.</p>
+</div>
+<div class="flex flex-col gap-4">
+<p class="text-primary font-label-lg uppercase tracking-widest mb-2">Chính sách</p>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-lg" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-lg" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<p class="text-primary font-label-lg uppercase tracking-widest mb-2">Khám phá</p>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-lg" href="#">Sustainability</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-lg" href="#">Global Support</a>
+</div>
+<div class="flex flex-col gap-4">
+<p class="text-primary font-label-lg uppercase tracking-widest mb-2">Liên hệ</p>
+<p class="text-on-surface-variant text-label-lg">contact@sinhdong.vn</p>
+<p class="text-on-surface-variant text-label-lg">+84 1900 6868</p>
+</div>
+</div>
+<div class="mt-16 text-center text-on-surface-variant text-label-lg border-t border-primary/5 pt-8">
+            © 2024 Sinh Động Luxury Ecosystem. All rights reserved.
+        </div>
+</footer>
+<script>
+        // Calculator Logic
+        const stationSlider = document.getElementById('station-slider');
+        const rentalSlider = document.getElementById('rental-slider');
+        const stationVal = document.getElementById('station-val');
+        const rentalVal = document.getElementById('rental-val');
+        const roiOutput = document.getElementById('roi-output');
+
+        function updateCalculator() {
+            const stations = parseInt(stationSlider.value);
+            const rentals = parseInt(rentalSlider.value);
+            
+            stationVal.innerText = stations;
+            rentalVal.innerText = rentals;
+
+            // Simple math: stations * rentals/day * 30 days * 20000 VND * 40% share
+            const monthlyProfit = stations * rentals * 30 * 20000 * 0.4;
+            roiOutput.innerText = monthlyProfit.toLocaleString('vi-VN');
+        }
+
+        stationSlider.addEventListener('input', updateCalculator);
+        rentalSlider.addEventListener('input', updateCalculator);
+
+        // FAQ Tabs Logic
+        function switchTab(type) {
+            const b2bTab = document.getElementById('tab-b2b');
+            const b2cTab = document.getElementById('tab-b2c');
+            const b2bContent = document.getElementById('faq-b2b');
+            const b2cContent = document.getElementById('faq-b2c');
+
+            if (type === 'b2b') {
+                b2bTab.classList.add('text-primary', 'border-primary', 'border-b-2');
+                b2bTab.classList.remove('text-on-surface-variant');
+                b2cTab.classList.remove('text-primary', 'border-primary', 'border-b-2');
+                b2cTab.classList.add('text-on-surface-variant');
+                b2bContent.classList.remove('hidden');
+                b2cContent.classList.add('hidden');
+            } else {
+                b2cTab.classList.add('text-primary', 'border-primary', 'border-b-2');
+                b2cTab.classList.remove('text-on-surface-variant');
+                b2bTab.classList.remove('text-primary', 'border-primary', 'border-b-2');
+                b2bTab.classList.add('text-on-surface-variant');
+                b2cContent.classList.remove('hidden');
+                b2bContent.classList.add('hidden');
+            }
+        }
+
+        // Accordion Logic
+        function toggleFaq(element) {
+            element.classList.toggle('faq-active');
+        }
+
+        // Init
+        updateCalculator();
+    </script>
+</body></html>
